@@ -15,7 +15,7 @@ const Form = () => {
     try {
       const weatherData = await axios.post('/', { zipCode })
       console.log(weatherData.data);
-      navigate('/weather', {state: {data: weatherData.data}});
+      navigate('/weather', { state: { data: weatherData.data } });
 
     } catch (error) {
       if (error) {
@@ -34,6 +34,7 @@ const Form = () => {
           onChange={(e) => setZipCode(e.target.value)}
           value={zipCode}
           required
+          placeholder='Enter ZipCode'
 
         />
         <button className="rounded-md bg-green-500">Search</button>

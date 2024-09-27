@@ -12,7 +12,6 @@ function App() {
         <Route path="/" element={<Form />} />
         <Route path="/weather" element={<Weather />} />
       </Routes>
-      <Form />
     </div>
   );
 }

@@ -1,9 +1,14 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Weather = () => {
     const location = useLocation();
     const { state } = location;
+    const navigate = useNavigate();
+
+    const backToHome = () => {
+        navigate(-1);
+    }
 
     // Add a check to ensure state exists before destructuring
     if (!state) {
@@ -30,7 +35,7 @@ const Weather = () => {
                     <h1 className='text-[3vmin] font-bold'>Feels Like: {data.main.feels_like} °F</h1>
                 </div>
                 <div className='text-center'>
-                    {/* <button onClick={back} className=' bg-yellow-500 p-2 rounded-md'><h1 className='text-[3vmin]'>Back</h1></button> */}
+                    <button onClick={backToHome} className=' bg-yellow-500 p-2 rounded-md'><h1 className='text-[3vmin]'>Back</h1></button>
                 </div>
             </div>
         </>
