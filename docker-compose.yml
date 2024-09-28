@@ -1,0 +1,20 @@
+services:
+  weatherbackend:
+    build: ./server
+    ports:
+      - "8080:8080"
+    networks:
+      - weather
+
+  weatherfrontend:
+    build: ./weather
+    ports:
+      - "3000:3000"
+    networks:
+      - weather
+    environment:
+      - REACT_APP_API_URL=http://backend:8080
+
+networks:
+  weather:
+    driver: bridge

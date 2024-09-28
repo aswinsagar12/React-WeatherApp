@@ -6,7 +6,6 @@ COPY package.json .
 RUN npm install
 
 COPY . .
-ENV REACT_APP_API_URL=http://backend:8080
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["npm", "run", "start"]
