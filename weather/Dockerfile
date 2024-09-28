@@ -6,7 +6,7 @@ COPY package.json .
 RUN npm install
 
 COPY . .
-ENV REACT_APP_API_URL=http://backend:8080
+ENV REACT_APP_API_URL=http://weatherbackend:8080
 EXPOSE 3000
 
 CMD ["npm", "run", "start"]

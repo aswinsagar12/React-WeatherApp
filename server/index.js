@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 const HOST = process.env.HOST || '0.0.0.0';
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000'
+  origin: '*'
 }));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*"); // Adjust as necessary

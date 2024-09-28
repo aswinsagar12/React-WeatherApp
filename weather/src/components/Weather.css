@@ -1,0 +1,113 @@
+.weather-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #FFE5E5, #E5E5FF);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.location {
+    font-size: 8vmin;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1rem 2rem;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.weather-description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.weather-description h3 {
+    font-size: 3vmin;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.weather-details h1 {
+    font-size: 2.5vmin;
+    font-weight: bold;
+    background-color: white;
+    padding: 1rem;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.back-button-container {
+    text-align: center;
+}
+
+.back-button {
+    background-color: #FFD700;
+    padding: 1rem 2rem;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.back-button h1 {
+    font-size: 3vmin;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .weather-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-details h1, .back-button {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .location {
+        font-size: 6vmin;
+    }
+}

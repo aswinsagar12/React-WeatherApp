@@ -1,3 +1,4 @@
+version: '3'
 services:
   weatherbackend:
     build: ./server
@@ -13,7 +14,9 @@ services:
     networks:
       - weather
     environment:
-      - REACT_APP_API_URL=http://backend:8080
+      - REACT_APP_API_URL=http://weatherbackend:8080
+    depends_on:
+      - weatherbackend
 
 networks:
   weather:

@@ -1,7 +1,7 @@
 import './App.css';
 import Form from './components/Form';
 import Weather from './components/Weather';
-import { Component } from 'react';
+// import { Component } from 'react';
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
